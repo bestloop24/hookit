@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <title>PlanProMatrix</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A growing online-affiliate business founded in 2013 that aims to provide a home-based income-generating platform to people">
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="landingpage/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="landingpage/assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="landingpage/assets/css/styles.css?v1.1">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a class="scrollto" href="#hero">
+                    <span class="logo-icon-wrapper"><img src="/img/logo-plain.png" class="logo-img" alt="PlanProMatrix"></span>
+                    <!-- <span class="logo-icon-wrapper"><img class="logo-icon" src="landingpage/assets/images/logo-icon.svg" alt="icon"></span> -->
+                    <!-- <span class="text">PlanProMatrix</span> -->
+                </a>
+            </h1>
+            <!--//logo-->
+            <nav class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--//nav-toggle-->
+                </div>
+                <!--//navbar-header-->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item"><a class="scrollto" href="#hero">Home</a></li>
+                        <li class="active nav-item"><a class="scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#eload">Features</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#support">Support</a></li>
+                        <li class="nav-item"><a class="members-login" href="https://office.planpromatrix.com">Members Login</a></li>
+                    </ul>
+                    <!--//nav-->
+                </div>
+                <!--//navabr-collapse-->
+            </nav>
+            <!--//main-nav-->
+        </div>
+        <!--//container-->
+    </header>
+    <!--//header-->
+    <div id="hero" class="hero-section">
+        <div id="hero-carousel" class="hero-carousel carousel carousel-fade slide" data-ride="carousel" data-interval="10000">
+            <div class="figure-holder-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="figure-holder">
+                            <img class="figure-image img-responsive" src="/img/desktop-image.png" alt="image" />
+                        </div>
+                        <!--//figure-holder-->
+                    </div>
+                    <!--//row-->
+                </div>
+                <!--//container-->
+            </div>
+            <!--//figure-holder-wrapper-->
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
+                <li data-slide-to="1" data-target="#hero-carousel"></li>
+                <li data-slide-to="2" data-target="#hero-carousel"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item item-1 active">
+                    <div class="item-content container">
+                        <div class="item-content-inner">
+                            <h2 class="heading">Online Office</h2>
+                            <p class="intro">We provide 24/7, real-time income and group monitoring to help our members get on-board, check their earnings and navigate through our system. . We also have a dedicated support team to answer technical issues and other concerns.</p>
+                            <a class="btn btn-primary btn-cta" href="https://office.planpromatrix.com/" target="_blank">Login to your account</a>
+                        </div>
+                        <!--//item-content-inner-->
+                    </div>
+                    <!--//item-content-->
+                </div>
+                <!--//item-->
+                <div class="item item-2">
+                    <div class="item-content container">
+                        <div class="item-content-inner">
+                            <h2 class="heading">E-Loading</h2>
+                            <p class="intro">Our e-load dealership offers a complete package that allows our dealers to maximize their profits. Aside from becoming an e-load dealer, you can also be an e-load retailer to other customers and earn profits</p>
+                            <a class="btn btn-primary btn-cta" href="https://eload.planpromatrix.com/" target="_blank">Login your retailer</a>
+                        </div>
+                        <!--//item-content-inner-->
+                    </div>
+                </div>
+                <!--//item-->
+                <div class="item item-3">
+                    <div class="item-content container">
+                        <div class="item-content-inner">
+                            <h2 class="heading">Data Entry</h2>
+                            <p class="intro">Earn at the comforts of your own home through our Data Entry business, a simple software-based encoding service. This home-based service is one of the hottest offerings by PPM, with thousands of members not just in the Philippines but in different parts of the world.</p>
+                            <a class="btn btn-primary btn-cta" href="https://drive.google.com/drive/folders/0B4zuCa3riTmiYnBCVUFXcmg5NkU" target="_blank">Download Software</a>
+                        </div>
+                        <!--//item-content-inner-->
+                    </div>
+                </div>
+                <!--//item-->
+            </div>
+            <!--//carousel-inner-->
+        </div>
+        <!--//carousel-->
+    </div>
+    <!--//hero-->
+    <div id="about" class="about-section">
+        <div class="container text-center">
+            <h2 class="section-title">PlanProMatrix</h2>
+            <p class="intro">A growing online-affiliate business founded in 2013 that aims to provide a home-based income-generating platform to people</p>
+            <div class="items-wrapper row">
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="landingpage/assets/images/figure-1.png" alt="image">
+                        </div>
+                        <!--//figure-holder-->
+                        <h3 class="item-title">Online Office</h3>
+                        <div class="item-desc text-left">
+                            <ul>
+                                <li>24/7 income monitoring</li>
+                                <li>dedicated technical support team</li>
+                            </ul>
+                        </div>
+                        <!--//item-desc-->
+                    </div>
+                    <!--//item-inner-->
+                </div>
+                <!--//item-->
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="landingpage/assets/images/figure-2.png" alt="image">
+                        </div>
+                        <!--//figure-holder-->
+                        <h3 class="item-title">Data Entry</h3>
+                        <div class="item-desc text-left">
+                            <ul>
+                                <li>Easy and quick data encoding business</li>
+                                <li>Home-based</li>
+                                <li>Daily payout schedule</li>
+                                <li>Incentives for active users</li>
+                                <li>Good income opportunity</li>
+                            </ul>
+                        </div>
+                        <!--//item-desc-->
+                    </div>
+                    <!--//item-inner-->
+                </div>
+                <!--//item-->
+                <div class="item col-sm-4 col-xs-12">
+                    <div class="item-inner">
+                        <div class="figure-holder">
+                            <img class="figure-image" src="landingpage/assets/images/figure-3.png" alt="image">
+                        </div>
+                        <!--//figure-holder-->
+                        <h3 class="item-title">E-Loading Business</h3>
+                        <div class="item-desc text-left">
+                            <ul>
+                                <li>SIM card registration activation package</li>
+                                <li>2-in-1 dealer/retailer opportunity</li>
+                                <li>Monthly e-rebates and other incentives</li>
+                                <li>Convenient one-SIM for all networks</li>
+                                <li>Multipurpose load wallet for retailing and personal use</li>
+                                <li>Unlimited text to all networks--local and international</li>
+                            </ul>
+                        </div>
+                        <!--//item-desc-->
+                    </div>
+                    <!--//item-inner-->
+                </div>
+                <!--//item-->
+            </div>
+            <!--//items-wrapper-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//about-section-->
+    <div id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title text-center">Success Stories</h2>
+            <div class="item center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/img/christy-lintang.jpg" alt="Christy Lintang" style="border-radius: 50%">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>Another encashment done for my children’s school allowance! Whenever I need cash, PPM is always on the rescue. This business is legit and can be a good source of income if you put in your 100% effort. I always get my payout without any hassle!</p>
+                        <div class="quote-source">
+                            <span class="name">Christy Lintang,</span>
+                            <a class="meta" href="https://office.planpromatrix.com/login">Davao</a>
+                        </div>
+                        <!--//quote-source-->
+                    </blockquote>
+                </div>
+                <!--//quote-holder-->
+            </div>
+            <!--//item-->
+            <div class="item item-reversed center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/img/marygrace-seballos.jpg" alt="Marygrace Seballos" style="border-radius: 50%">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>PPM’s new software is a great improvement. Their e-loading is faster even when you only have one account. The images are also easier and come with sounds. Thumbs up!</p>
+                        <div class="quote-source">
+                            <span class="name">Marygrace Seballos,</span>
+                            <a class="meta" href="https://office.planpromatrix.com/login">North Cotabato</a>
+                        </div>
+                        <!--//quote-source-->
+                    </blockquote>
+                </div>
+                <!--//quote-holder-->
+            </div>
+            <!--//item-->
+            <div class="item center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/img/lendl-torres.jpg" alt="Lendl Torres" style="border-radius: 50%">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>After one year of joining PPM, I can say that this was the best decision I’ve ever made. PPM changed the life of my family. My 600-peso capital has reached more than 700,000 pesos in just one year! I did data encoding, e-loading and advertising using Facebook—all at the comforts of my home. I did this while taking care of my baby at the same time. All my hardwork paid off, thanks to PPM! It is indeed the best online home-based job. Thank you PlanProMatrix, especially to our CEO Bong Naval and our operations manager Junnel Millano. Thank you so much!</p>
+                        <div class="quote-source">
+                            <span class="name">Lendl Torres,</span>
+                            <a class="meta" href="https://office.planpromatrix.com/login">Lipa Batangas</a>
+                        </div>
+                        <!--//quote-source-->
+                    </blockquote>
+                </div>
+                <!--//quote-holder-->
+            </div>
+            <!--//item-->
+            <div class="item item-reversed center-block">
+                <div class="profile-holder">
+                    <img class="profile-image" src="/img/chrishiel-cerda.jpg" alt="Marygrace Seballos" style="border-radius: 50%">
+                </div>
+                <div class="quote-holder">
+                    <blockquote class="quote">
+                        <p>
+                            I’m a home-based mom and thanks to PPM, I get to earn money while taking care of my 3-year old
+                            daughter. I’m also pregnant but that does not hinder me from pursuing my goals. It only goes to show that
+                            there is nothing impossible if you persevere. Even if you are a cellphone user and don’t have a PC, you
+                            can still earn at PPM as long as you’re willing to learn. I’m really thankful that someone introduced me to
+                            PPM. If not for this wonderful company, I won’t have this kind of income.
+                        </p>
+                        <div class="quote-source">
+                            <span class="name">Chrishiel Cerda,</span>
+                            <a class="meta" href="https://office.planpromatrix.com/login">Binangonan, Rizal</a>
+                        </div>
+                        <!--//quote-source-->
+                    </blockquote>
+                </div>
+                <!--//quote-holder-->
+            </div>
+            <!--//item-->
+
+        </div>
+        <!--//container-->
+    </div>
+    <!--//testimonials-->
+    <div id="eload" class="features-section">
+        <div class="container text-center">
+            <h2 class="section-title">Features</h2>
+            <p class="intro">Some introduction about features below</p>
+            <div class="tabbed-area row">
+                <!-- Nav tabs -->
+                <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-6 col-xs-12 col-md-push-8 col-sm-push-6 col-xs-push-0" role="tablist">
+                    <li role="presentation" class="active"><a href="#feature-1" aria-controls="feature-1" role="tab" data-toggle="tab"><i class="fa fa-desktop fa-fw"></i>Manage your account</a></li>
+                    <li role="presentation"><a href="#feature-2" aria-controls="feature-2" role="tab" data-toggle="tab"><i class="fa fa-question-circle fa-fw"></i>Dedicated support</a></li>
+                    <li role="presentation"><a href="#feature-3" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-mobile fa-fw"></i>E-Loading bussiness</a></li>
+                    <li role="presentation"><a href="#feature-4" aria-controls="feature-4" role="tab" data-toggle="tab"><i class="fa fa-laptop fa-fw"></i>Data Entry</a></li>
+                    <li role="presentation"><a href="#feature-5" aria-controls="feature-5" role="tab" data-toggle="tab"><i class="fa fa-users fa-fw"></i>Referrals</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="feature-content tab-content col-md-8 col-sm-6 col-xs-12 col-md-pull-4 col-sm-pull-6 col-xs-pull-0">
+                    <div role="tabpanel" class="tab-pane fade in active" id="feature-1">
+                        <a href="#" target="_blank"><img class="img-responsive" src="/img/manage-your-account.png" alt="screenshot"></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-2">
+                        <a href="#" target="_blank"><img class="img-responsive" src="/img/dedicated-support.png" alt="screenshot"></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-3">
+                        <a href="#" target="_blank"><img class="img-responsive" src="/img/eloading.png" alt="screenshot"></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-4">
+                        <a href="#" target="_blank"><img class="img-responsive" src="/img/data-entry.png" alt="screenshot"></a>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="feature-5">
+                        <a href="#" target="_blank"><img class="img-responsive" src="/img/referrals.png" alt="screenshot"></a>
+                    </div>
+                </div>
+                <!--//feature-content-->
+            </div>
+            <!--//tabbed-area-->
+        </div>
+        <!--//container-->
+    </div>
+    <!--//features-->
+    <div id="support" class="contact-section">
+        <div class="container text-center">
+            <h2 class="section-title">Contact Support</h2>
+            <div class="contact-content">
+                <p>We have a team of dedicated support specialist to help you with your concerns.</p>
+            </div>
+            <a class="btn btn-cta btn-primary" href="https://support.planpromatrix.com">Goto Support</a>
+        </div>
+        <!--//container-->
+    </div>
+    <!--//contact-section-->
+    <footer class="footer text-center">
+        <div class="container">
+            <small class="copyright">All rights reserved <a href="https://planpromatrix.com">planromatrix.com</a> &copy; 2017</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!-- Javascript -->
+    <script type="text/javascript" src="landingpage/assets/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="landingpage/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="landingpage/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="landingpage/assets/js/main.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"2df579afb4","applicationID":"82379450","transactionName":"YlcHYRBVXUUFVBBZXVsdJFYWXVxYS2stXF5AXwxbA0BWajZYEURbW1U5YwtRRHULWRBCXVleAEc=","queueTime":0,"applicationTime":12,"atts":"ThAEF1hPTks=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
